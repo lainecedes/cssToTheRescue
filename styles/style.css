@@ -1,6 +1,15 @@
 /* fonts */
 
 
+/* css remedy */
+*, *::after, *::before {
+    box-sizing:border-box;  
+}
+  
+button, summary {
+      cursor: pointer;
+}
+
 
 /* custom properties */
 
@@ -18,6 +27,10 @@
 
 html {
     background-color: antiquewhite;
+}
+
+section {
+    margin: 2em;
 }
  
 
