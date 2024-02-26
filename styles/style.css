@@ -1,5 +1,6 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Stylish&display=swap");
 
 /* css remedy */
 *,
@@ -18,6 +19,13 @@ summary {
 :root {
     --background-black: #000;
     --background-white: #fff;
+    --white: #f2f2f0;
+    --red: #ce6a6c;
+    --pink: #edada3;
+    --pinky: #f9c7be;
+    --light-blue: #94c4c1;
+    --blue: #42899b;
+    --dark-blue: #28405c;
 }
 
 /* ------------------- */
@@ -139,6 +147,160 @@ section:first-child [popover]::backdrop {
 /* ----------------------- */
 /* ----- Sena's code ----- */
 /* ----------------------- */
+
+section:nth-child(2) {
+    font-family: "Shantell Sans", cursive;
+    font-weight: 700;
+}
+
+section:nth-child(2) > button {
+    /* display */
+    display: inline-block;
+
+    overflow: hidden;
+
+    /* position */
+    position: relative;
+
+    /* size */
+    font-size: 2em;
+    padding: 0.4em;
+    margin: 0;
+
+    /* color */
+    background-color: var(--light-blue);
+    color: var(--background-black);
+
+    /* border */
+    border-radius: 0.5em;
+    border: inset var(--pink);
+
+    /* border: none; */
+
+    /* text */
+    font-family: "Shantell Sans", cursive;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+
+    /* animation */
+    touch-action: manipulation;
+}
+
+/* user text */
+section:nth-child(2) > button span:first-child {
+    /* position */
+    position: relative;
+    z-index: 1;
+}
+
+/* BUTTON STYLING */
+/* inspiration source: https://codepen.io/fabiocberg/pen/wvqpXqg?editors=1100 */
+/* sena text */
+section:nth-child(2) > button span:last-child {
+    /* display */
+    color: var(--background-white);
+    display: block;
+
+    /* position */
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+
+    /* size */
+    height: 0.75em;
+
+    /* color */
+    opacity: 0;
+
+    /* animation */
+    transform: translateY(225%) translateX(-100%);
+}
+
+/* sena text background */
+section:nth-child(2) > button:after {
+    /* display */
+    content: "";
+
+    /* position */
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    z-index: 5;
+
+    /* size */
+    width: 100%;
+    height: 100%;
+
+    /* color */
+    background-color: var(--red);
+
+    /* animation */
+    transform-origin: bottom;
+    transition: transform 600ms ease-in-out;
+    transform: skewY(9.3deg) scaleY(0);
+}
+
+section:nth-child(2) > button:hover:after {
+    /* animation */
+    transform-origin: bottom;
+    transform: skewY(15deg) scaleY(2);
+}
+
+section:nth-child(2) > button:hover span:last-child {
+    /* animation */
+    opacity: 1;
+    transform: translateX(-50%) translateY(-100%);
+    transition: all 900ms ease-in-out;
+}
+
+/* POPOVER STYLING */
+section:nth-child(2) > div {
+    /* position */
+    position: relative;
+
+    /* size */
+    max-width: 20em;
+    min-width: 10em;
+    height: 17.5em;
+
+    /* color */
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+    /* border */
+    border: none;
+    border-radius: 1em;
+}
+/* close button */
+section:nth-child(2) > div button {
+    /* display */
+    display: block;
+
+    /* position */
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+
+    /* size */
+    width: 1.5em;
+    height: 1.5em;
+
+    /* color */
+    background: var(--blue);
+    color: var(--white);
+
+    /* text */
+    font-family: "Shantell Sans", cursive;
+    font-weight: 700;
+
+    /* border */
+    border-radius: 0.5em;
+    border: none;
+}
 
 /* ------------------------- */
 /* ----- Justin's code ----- */
