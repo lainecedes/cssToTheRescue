@@ -2,12 +2,15 @@
 
 
 /* css remedy */
-*, *::after, *::before {
-    box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
-  
-button, summary {
-      cursor: pointer;
+
+button,
+summary {
+    cursor: pointer;
 }
 
 
@@ -32,7 +35,7 @@ html {
 section {
     margin: 2em;
 }
- 
+
 
 
 
@@ -53,4 +56,33 @@ section {
 /* ------------------------- */
 /* ----- Justin's code ----- */
 /* ------------------------- */
+section:nth-of-type(3)>[popover] {
+    inset: unset;
+    left: 50vh;
+}
 
+section:nth-of-type(3)>[popover]::backdrop {
+    background-color: red;
+    opacity: 50%;
+}
+
+
+section:nth-of-type(3) {
+    background-color: red;
+}
+
+section:nth-of-type(3) button {
+    color: blue;
+}
+
+section:nth-of-type(3) div {
+    background-color: green;
+}
+
+section:nth-of-type(3) div p {
+    color: white;
+}
+
+section:nth-of-type(3) div img {
+    width: 5em;
+}
