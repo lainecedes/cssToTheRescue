@@ -27,11 +27,16 @@
         </section>
 
         <section>
-            <button id="justinbtn" popovertarget="my-popover-justin">Open Popover</button>
-            <div popover anchor="justinbtn" id="my-popover-justin">
+            <button id="justinbtn" popovertarget="my-popover-justin">
+                <p>Open</p>
+            </button>
+            <div popover="manual" anchor="justinbtn" id="my-popover-justin">
                 <ul>
+                    <button popovertarget="my-popover-justin" popovertargetaction="hide">
+                        <p>x</p>
+                    </button>
                     <li>
-                        <a href="www.linkedin.com/in/justin-prins-123036157" target="_blank"><img
+                        <a href="https://www.linkedin.com/in/justin-prins-123036157/" target="_blank"><img
                                 src="./images/LinkedIn_icon.png" alt=""></a>
                     </li>
                     <li> <a href="https://open.spotify.com/user/11128373260?si=4ba9b29477024866" target="_blank"> <img
@@ -43,6 +48,7 @@
                     </li>
                 </ul>
             </div>
+
         </section>
 
 
