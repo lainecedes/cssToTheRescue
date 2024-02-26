@@ -1,14 +1,23 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 /* css remedy */
-*, *::after, *::before {
-    box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
-  
-button, summary {
-      cursor: pointer;
+
+button,
+summary {
+    cursor: pointer;
+}
+
+/* custom properties */
+
+:root {
+    --background-black: #000;
+    --background-white: #fff;
 }
 
 /* ------------------- */
@@ -16,7 +25,7 @@ button, summary {
 /* ------------------- */
 
 html {
-    background-color:lavender;
+    background-color: lavender;
 }
 main {
     display: flex;
@@ -32,9 +41,6 @@ h1 {
 section {
     margin: 2em;
 }
- 
-
-
 
 /* ------------------------- */
 /* ----- Elaine's code ----- */
@@ -71,16 +77,10 @@ section:first-child [popover] {
     left: 1em;
 }
 
-
-
 /* ----------------------- */
 /* ----- Sena's code ----- */
 /* ----------------------- */
 
-
-
-
 /* ------------------------- */
 /* ----- Justin's code ----- */
 /* ------------------------- */
-
