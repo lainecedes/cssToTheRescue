@@ -19,6 +19,7 @@ summary {
 :root {
     --background-black: #000;
     --background-white: #fff;
+    --white: #f2f2f0;
     --red: #ce6a6c;
     --pink: #edada3;
     --pinky: #f9c7be;
@@ -199,7 +200,21 @@ section:nth-child(2) > button:hover span:last-child {
 
 /* POPOVER STYLING */
 section:nth-child(2) > div {
+    /* position */
     position: relative;
+
+    /* size */
+    max-width: 20em;
+    min-width: 10em;
+    height: 17.5em;
+
+    /* color */
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+    /* border */
+    border: none;
+    border-radius: 1em;
 }
 /* close button */
 section:nth-child(2) > div button {
@@ -208,8 +223,8 @@ section:nth-child(2) > div button {
 
     /* position */
     position: absolute;
-    right: 0.25em;
-    top: 0.25em;
+    right: 0.5em;
+    top: 0.5em;
 
     /* size */
     width: 1.5em;
@@ -217,9 +232,14 @@ section:nth-child(2) > div button {
 
     /* color */
     background: var(--blue);
+    color: var(--white);
+
+    /* text */
+    font-family: "Shantell Sans", cursive;
+    font-weight: 700;
 
     /* border */
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     border: none;
 }
 
