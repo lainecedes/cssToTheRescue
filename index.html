@@ -9,10 +9,16 @@
 </head>
 
 <body>
+    <h1>Popovers and anchor positioning</h1>
     <main>
+        <!-- elaine's section -->
         <section>
-            <button popovertarget="my-popover">Open Popover</button>
-            <div popover id="my-popover">Greetings, one and all!</div>
+            <button id="elaine-anchor" popovertarget="elaine-popover">Open</button>
+            <div popover anchor="elaine-anchor" id="elaine-popover">
+                <img src="" alt="profile photo">
+                <h2>Hoi iedereen</h2>
+                <p>Coole tekst enzo!</p>
+            </div>
         </section>
 
         <section>
