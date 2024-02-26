@@ -108,7 +108,8 @@ section:nth-of-type(3) button {
 }
 
 section:nth-of-type(3) div {
-    background-color: green;
+    background-color: bisque;
+    border-radius: 20px;
 }
 
 section:nth-of-type(3) div p {
@@ -117,4 +118,20 @@ section:nth-of-type(3) div p {
 
 section:nth-of-type(3) div img {
     width: 5em;
+}
+
+section:nth-of-type(3) div ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+section:nth-of-type(3) div li {
+    list-style-type: none;
+    padding: 1em;
+}
+
+section:nth-of-type(3) div li:hover {
+    background-color: rgb(176, 158, 135);
+    border-radius: 20px;
 }
