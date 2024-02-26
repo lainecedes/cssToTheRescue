@@ -71,6 +71,19 @@ section:first-child button {
     padding: 0.5em;
 
     border-radius: 0.7em;
+    box-shadow: 0 0.2em darkmagenta;
+}
+
+
+section:first-child button:active {
+    box-shadow: 0 0.1em darkmagenta;
+    transform: translateY(0.3em);
+    transition: 0.2s ease;
+}
+
+section:first-child button:hover {
+    transform: translateY(0.2em);
+    transition: 0.2s ease;
 }
 
 section:first-child div h2 {
@@ -78,7 +91,41 @@ section:first-child div h2 {
     padding: 0;
     font-size: 2em;
     font-weight: bold;
+    
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    color: transparent;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+section:first-child div ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+section:first-child div ul li {
+    list-style-type: none;
+}
+
+section:first-child div img {
+    width: 3em;
+}
+
 
 section:first-child [popover] {
     padding: 1em;
@@ -86,8 +133,16 @@ section:first-child [popover] {
     border: none;
     border-radius: 1em;
     inset: unset;
-    left: 1em;
+    left: 35%;
+
 }
+
+
+section:first-child [popover]::backdrop {
+    opacity: 50%;
+}
+
+
 
 /* ----------------------- */
 /* ----- Sena's code ----- */
