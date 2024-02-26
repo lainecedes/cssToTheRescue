@@ -1,4 +1,5 @@
 /* fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 
 /* css remedy */
@@ -10,23 +11,22 @@ button, summary {
       cursor: pointer;
 }
 
-
-/* custom properties */
-
-:root {
-    --background-black: #000;
-    --background-white: #FFF;
-}
-
-
-
 /* ------------------- */
 /* ----- general ----- */
 /* ------------------- */
 
-
 html {
-    background-color: antiquewhite;
+    background-color:lavender;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
 }
 
 section {
@@ -40,6 +40,36 @@ section {
 /* ----- Elaine's code ----- */
 /* ------------------------- */
 
+section:first-child {
+    font-family: "DM Sans", sans-serif;
+}
+
+section:first-child button {
+    font-weight: bold;
+    font-size: 2em;
+
+    background-color: plum;
+    border: none;
+    padding: 0.5em;
+
+    border-radius: 0.7em;
+}
+
+section:first-child div h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+section:first-child [popover] {
+    padding: 1em;
+    background-color: plum;
+    border: none;
+    border-radius: 1em;
+    inset: unset;
+    left: 1em;
+}
 
 
 
