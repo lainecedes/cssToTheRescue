@@ -39,12 +39,15 @@ html {
 main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: "DM Sans", sans-serif;
+    text-align: center;
 }
 
 section {
