@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="styles/style.css" />
-    </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
 
     <body>
         <h1>Popovers and anchor positioning</h1>
@@ -28,66 +29,80 @@
                 </div>
             </section>
 
-            <!-- SENA START -->
-            <section>
-                <button popovertarget="sena-popover">
-                    <span>User</span>
-                    <span>Sena</span>
-                </button>
-                <div popover="manual" id="sena-popover">
-                    <button popovertarget="sena-popover" popovertargetaction="hide">x</button>
-                    <ul>
-                        <li>
-                            <img src="#" alt="sena" />
-                        </li>
+        <!-- SENA START -->
+        <section>
+            <button popovertarget="sena-popover">
+                <span>User</span>
+                <span>Sena</span>
+            </button>
+            <div popover="manual" id="sena-popover">
+                <button popovertarget="sena-popover" popovertargetaction="hide">x</button>
+                <ul>
+                    <li>
+                        <img src="images/sena.jpg" alt="sena" />
+                        <p>Sena Nur</p>
+                    </li>
 
-                        <li>
-                            <p>Sena Nur</p>
-                        </li>
+                    <li>
+                        <!-- <button popovertarget="sena-socials">Socials</button> -->
+                        <p>Socials</p>
+                    </li>
+                    <!-- <li popover id="sena-socials"> -->
+                    <li>
+                        <a href="https://discord.com/users/933739295125160007"><img src="images/discord-mark-blue.png"
+                                alt="discord" /></a>
+                        <a href="https://www.instagram.com/_sennk_/"><img src="images/Instagram_icon.png"
+                                alt="instagram" /></a>
+                        <a href="https://www.linkedin.com/in/sena-nur-k-50169721a/"><img src="images/LinkedIn_icon.png"
+                                alt="linkedin" /></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- SENA END -->
+        <!-- JUSTIN START -->
+        <section>
+            <button id="justinbtn" popovertarget="my-popover-justin">
+                <p>Open</p>
+            </button>
+            <div popover="manual" anchor="justinbtn" id="my-popover-justin">
+                <ul>
+                    <button popovertarget="my-popover-justin" popovertargetaction="hide">
+                        <p>x</p>
+                    </button>
+                    <li>
+                        <a href="https://www.linkedin.com/in/justin-prins-123036157/" target="_blank"><img
+                                src="./images/LinkedIn_icon.png" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/user/11128373260?si=4ba9b29477024866" target="_blank">
+                            <img src="./images/Spotify_icon.png" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/justinprins/" target="_blank"> <img
+                                src="./images/Instagram_icon.png" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-                        <li>
-                            <!-- <button popovertarget="sena-socials">Socials</button> -->
-                            <p>Socials</p>
-                        </li>
-                        <!-- <li popover id="sena-socials"> -->
-                        <li>
-                            <a href="https://github.com/Sensinki">GitHub</a>
-                            <a href="https://www.instagram.com/_sennk_/">Instagram</a>
-                            <a href="https://www.linkedin.com/in/sena-nur-k-50169721a/">LinkedIn</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- SENA END -->
 
-            <section>
-                <button id="justinbtn" popovertarget="my-popover-justin">
-                    <p>Open</p>
-                </button>
-                <div popover="manual" anchor="justinbtn" id="my-popover-justin">
-                    <ul>
-                        <button popovertarget="my-popover-justin" popovertargetaction="hide">
-                            <p>x</p>
-                        </button>
-                        <li>
-                            <a href="https://www.linkedin.com/in/justin-prins-123036157/" target="_blank"><img src="./images/LinkedIn_icon.png" alt="" /></a>
-                        </li>
-                        <li>
-                            <a href="https://open.spotify.com/user/11128373260?si=4ba9b29477024866" target="_blank">
-                                <img src="./images/Spotify_icon.png" alt=""
-                            /></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/justinprins/" target="_blank"> <img src="./images/Instagram_icon.png" alt="" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <!-- TEST ERROR POPOVERS 
+        
+        <section>
+            <button popovertarget="errormessage">
+                <p>error</p>
+            </button>
+            <div popover id="errormessage"> <img src="./images/windows-error-message.png" alt=""> <button
+                    popovertarget="errormessage2"> </button></div>
+            <div popover id="errormessage2"> <img src="./images/windows-error-message.png" alt=""> <button
+                    popovertarget="errormessage3"> </button></div>
+            <div popover id="errormessage3"> <img src="./images/windows-error-message.png" alt=""> </div>
+        </section>  -->
 
+    </main>
 
-            <section>
-                <p></p>
-            </section>
-        </main>
-    </body>
+    <!-- JUSTIN END -->
+</body>
+
 </html>

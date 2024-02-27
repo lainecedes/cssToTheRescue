@@ -39,20 +39,20 @@ html {
 main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: "DM Sans", sans-serif;
+    text-align: center;
 }
 
 section {
     margin: 2em;
 }
-
-
-
 
 /* ------------------------- */
 /* ----- Elaine's code ----- */
@@ -76,7 +76,6 @@ section:first-child button {
     box-shadow: 0 0.2em darkmagenta;
 }
 
-
 section:first-child button:active {
     box-shadow: 0 0.1em darkmagenta;
     transform: translateY(0.3em);
@@ -95,7 +94,7 @@ section:first-child div h2 {
     padding: 0.5em 0 0 0.3em;
     font-size: 2em;
     font-weight: bold;
-    
+
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-clip: text;
     background-size: 200% 200%;
@@ -119,15 +118,17 @@ section:first-child div > img:nth-of-type(1) {
 
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 section:first-child div ul {
@@ -183,7 +184,7 @@ section:nth-child(2) {
     font-weight: 700;
 }
 
-section:nth-child(2) > button {
+section:nth-child(2)>button {
     /* display */
     display: inline-block;
 
@@ -216,10 +217,23 @@ section:nth-child(2) > button {
 
     /* animation */
     touch-action: manipulation;
+    transition: 1s ease-in-out;
+}
+
+section:nth-child(2)>button:hover {
+    border-radius: 3em;
+    transition: 1s ease-in-out;
+}
+
+section:nth-child(2)>button:active {
+    border-radius: 3em;
+    transform: rotate(10deg);
+
+    transition: 0.1s ease-in-out;
 }
 
 /* user text */
-section:nth-child(2) > button span:first-child {
+section:nth-child(2)>button span:first-child {
     /* position */
     position: relative;
     z-index: 1;
@@ -228,7 +242,7 @@ section:nth-child(2) > button span:first-child {
 /* BUTTON STYLING */
 /* inspiration source: https://codepen.io/fabiocberg/pen/wvqpXqg?editors=1100 */
 /* sena text */
-section:nth-child(2) > button span:last-child {
+section:nth-child(2)>button span:last-child {
     /* display */
     color: var(--background-white);
     display: block;
@@ -251,7 +265,7 @@ section:nth-child(2) > button span:last-child {
 }
 
 /* sena text background */
-section:nth-child(2) > button:after {
+section:nth-child(2)>button:after {
     /* display */
     content: "";
 
@@ -274,13 +288,17 @@ section:nth-child(2) > button:after {
     transform: skewY(9.3deg) scaleY(0);
 }
 
-section:nth-child(2) > button:hover:after {
+section:nth-child(2)>button:active:after {
+    background-color: var(--blue);
+}
+
+section:nth-child(2)>button:hover:after {
     /* animation */
     transform-origin: bottom;
     transform: skewY(15deg) scaleY(2);
 }
 
-section:nth-child(2) > button:hover span:last-child {
+section:nth-child(2)>button:hover span:last-child {
     /* animation */
     opacity: 1;
     transform: translateX(-50%) translateY(-100%);
@@ -288,14 +306,19 @@ section:nth-child(2) > button:hover span:last-child {
 }
 
 /* POPOVER STYLING */
-section:nth-child(2) > div {
+section:nth-child(2)>[popover]::backdrop {
+    backdrop-filter: blur(0.2em);
+}
+
+section:nth-child(2)>div {
     /* position */
     position: relative;
 
     /* size */
     max-width: 20em;
     min-width: 10em;
-    height: 17.5em;
+    min-height: 20em;
+    max-height: 30em;
 
     /* color */
     background-color: var(--dark-blue);
@@ -305,8 +328,9 @@ section:nth-child(2) > div {
     border: none;
     border-radius: 1em;
 }
+
 /* close button */
-section:nth-child(2) > div button {
+section:nth-child(2)>div button {
     /* display */
     display: block;
 
@@ -332,6 +356,90 @@ section:nth-child(2) > div button {
     border: none;
 }
 
+section:nth-child(2)>div button:hover {
+    background: var(--pink);
+    color: var(--background-black);
+}
+
+section:nth-child(2)>div button:active {
+    background: var(--red);
+    color: var(--white);
+}
+
+/* profile */
+section:nth-child(2) div ul {
+    /* display */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    /* size */
+    padding: 1em;
+}
+
+li {
+    list-style: none;
+}
+
+/* profile picture and username */
+section:nth-child(2) div ul li:first-child {
+    /* display */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* size */
+    padding: 0.2em;
+    list-style: none;
+}
+
+section:nth-child(2) div ul li:first-child img {
+    width: 5em;
+    height: 5em;
+    vertical-align: middle;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+section:nth-child(2) div ul li p {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* socials */
+section:nth-child(2) div ul li:nth-child(2) p {
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+/* links of socials */
+section:nth-child(2) div ul li:last-child {
+    /* display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+
+    /* size */
+    padding: 0.2em;
+    list-style: none;
+}
+
+section:nth-child(2) div ul li:last-child img {
+    width: 3em;
+    transition: 2s ease-in-out;
+}
+
+section:nth-child(2) div ul li:last-child img:hover {
+    transform: rotateY(360deg);
+    transition: 1s ease-in-out;
+}
+
 /* ------------------------- */
 /* ----- Justin's code ----- */
 /* ------------------------- */
@@ -344,15 +452,12 @@ section:nth-of-type(3)>[popover]::backdrop {
     backdrop-filter: blur(3px);
 }
 
-
 /* section:nth-of-type(3) {
     background-color: red;
 } */
 
-
-
 section:nth-of-type(3) button {
-    padding: .5em 2em;
+    padding: 0.5em 2em;
     background-color: rgb(229, 255, 127);
     border-radius: 20px;
     border: 5px solid rgb(142, 158, 78);
@@ -380,7 +485,6 @@ section:nth-of-type(3) div button {
     transition: 0.2s;
     box-shadow: none;
 }
-
 
 section:nth-of-type(3) div button:hover {
     background-color: rgb(219, 7, 7);
@@ -427,4 +531,26 @@ section:nth-of-type(3) div li {
 section:nth-of-type(3) div li:hover {
     background-color: rgb(176, 158, 135);
     border-radius: 20px;
+}
+
+section:nth-of-type(4) button {
+    background-color: red;
+    color: white;
+    width: 6em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px rgb(111, 0, 0);
+    border: none;
+}
+
+section:nth-of-type(4) div {
+    padding: 0em;
+    border: none;
+    background-color: transparent;
+}
+
+section:nth-of-type(4) div button {
+    padding: 10em;
+    border: none;
+    background-color: blue;
 }
