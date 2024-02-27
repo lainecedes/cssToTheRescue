@@ -62,6 +62,8 @@ section:first-child {
     font-family: "DM Sans", sans-serif;
 }
 
+/* Button */
+
 section:first-child button {
     font-weight: bold;
     font-size: 2em;
@@ -85,9 +87,11 @@ section:first-child button:hover {
     transition: 0.2s ease;
 }
 
+/* Personal information */
+
 section:first-child div h2 {
     margin: 0;
-    padding: 0;
+    padding: 0.5em 0 0 0.3em;
     font-size: 2em;
     font-weight: bold;
 
@@ -97,6 +101,21 @@ section:first-child div h2 {
     animation: gradient 15s ease infinite;
     color: transparent;
 }
+
+section:first-child div p {
+    padding: 0 0 0 0.7em;
+    max-width: 24ch;
+}
+
+section:first-child div > img:nth-of-type(1) {
+    position: relative;
+    height: 18em;
+    width: 18em;
+    top: 0;
+    border-radius: 1em;
+}
+
+
 
 @keyframes gradient {
     0% {
@@ -127,18 +146,34 @@ section:first-child div img {
     width: 3em;
 }
 
+section:first-child div ul li img:nth-of-type(3) {
+    position: relative;
+    top: 0;
+    left: 1em;
+    
+}
+
+
+/* Popover */
+
 section:first-child [popover] {
-    padding: 1em;
     background-color: plum;
     border: none;
     border-radius: 1em;
     inset: unset;
-    left: 35%;
+    top: 10em;
+    left: 23%;
 }
 
+
+
 section:first-child [popover]::backdrop {
-    opacity: 50%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    opacity: 75%;
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
 }
+
 
 /* ----------------------- */
 /* ----- Sena's code ----- */
