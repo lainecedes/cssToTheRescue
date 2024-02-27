@@ -51,9 +51,6 @@ section {
     margin: 2em;
 }
 
-
-
-
 /* ------------------------- */
 /* ----- Elaine's code ----- */
 /* ------------------------- */
@@ -74,7 +71,6 @@ section:first-child button {
     box-shadow: 0 0.2em darkmagenta;
 }
 
-
 section:first-child button:active {
     box-shadow: 0 0.1em darkmagenta;
     transform: translateY(0.3em);
@@ -91,7 +87,7 @@ section:first-child div h2 {
     padding: 0;
     font-size: 2em;
     font-weight: bold;
-    
+
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-clip: text;
     background-size: 200% 200%;
@@ -100,15 +96,15 @@ section:first-child div h2 {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 section:first-child div ul {
@@ -126,7 +122,6 @@ section:first-child div img {
     width: 3em;
 }
 
-
 section:first-child [popover] {
     padding: 1em;
     background-color: plum;
@@ -134,15 +129,11 @@ section:first-child [popover] {
     border-radius: 1em;
     inset: unset;
     left: 35%;
-
 }
-
 
 section:first-child [popover]::backdrop {
     opacity: 50%;
 }
-
-
 
 /* ----------------------- */
 /* ----- Sena's code ----- */
@@ -186,6 +177,19 @@ section:nth-child(2) > button {
 
     /* animation */
     touch-action: manipulation;
+    transition: 1s ease-in-out;
+}
+
+section:nth-child(2) > button:hover {
+    border-radius: 3em;
+    transition: 1s ease-in-out;
+}
+
+section:nth-child(2) > button:active {
+    border-radius: 3em;
+    transform: rotate(10deg);
+
+    transition: 0.1s ease-in-out;
 }
 
 /* user text */
@@ -244,6 +248,10 @@ section:nth-child(2) > button:after {
     transform: skewY(9.3deg) scaleY(0);
 }
 
+section:nth-child(2) > button:active:after {
+    background-color: var(--blue);
+}
+
 section:nth-child(2) > button:hover:after {
     /* animation */
     transform-origin: bottom;
@@ -258,6 +266,10 @@ section:nth-child(2) > button:hover span:last-child {
 }
 
 /* POPOVER STYLING */
+section:nth-child(2) > [popover]::backdrop {
+    backdrop-filter: blur(0.2em);
+}
+
 section:nth-child(2) > div {
     /* position */
     position: relative;
@@ -265,7 +277,8 @@ section:nth-child(2) > div {
     /* size */
     max-width: 20em;
     min-width: 10em;
-    height: 17.5em;
+    min-height: 20em;
+    max-height: 30em;
 
     /* color */
     background-color: var(--dark-blue);
@@ -302,27 +315,107 @@ section:nth-child(2) > div button {
     border: none;
 }
 
+section:nth-child(2) > div button:hover {
+    background: var(--pink);
+    color: var(--background-black);
+}
+
+section:nth-child(2) > div button:active {
+    background: var(--red);
+    color: var(--white);
+}
+
+/* profile */
+section:nth-child(2) div ul {
+    /* display */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    /* size */
+    padding: 1em;
+}
+
+li {
+    list-style: none;
+}
+
+/* profile picture and username */
+section:nth-child(2) div ul li:first-child {
+    /* display */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* size */
+    padding: 0.2em;
+    list-style: none;
+}
+
+section:nth-child(2) div ul li:first-child img {
+    width: 5em;
+    height: 5em;
+    vertical-align: middle;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+section:nth-child(2) div ul li p {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* socials */
+section:nth-child(2) div ul li:nth-child(2) p {
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+/* links of socials */
+section:nth-child(2) div ul li:last-child {
+    /* display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+
+    /* size */
+    padding: 0.2em;
+    list-style: none;
+}
+
+section:nth-child(2) div ul li:last-child img {
+    width: 3em;
+    transition: 2s ease-in-out;
+}
+
+section:nth-child(2) div ul li:last-child img:hover {
+    transform: rotateY(360deg);
+    transition: 1s ease-in-out;
+}
 /* ------------------------- */
 /* ----- Justin's code ----- */
 /* ------------------------- */
-section:nth-of-type(3)>[popover] {
+section:nth-of-type(3) > [popover] {
     inset: unset;
     left: 45%;
 }
 
-section:nth-of-type(3)>[popover]::backdrop {
+section:nth-of-type(3) > [popover]::backdrop {
     backdrop-filter: blur(3px);
 }
-
 
 /* section:nth-of-type(3) {
     background-color: red;
 } */
 
-
-
 section:nth-of-type(3) button {
-    padding: .5em 2em;
+    padding: 0.5em 2em;
     background-color: rgb(229, 255, 127);
     border-radius: 20px;
     border: 5px solid rgb(142, 158, 78);
@@ -335,7 +428,7 @@ section:nth-of-type(3) button p {
     font-weight: bolder;
 }
 
-section:nth-of-type(3)>button:hover {
+section:nth-of-type(3) > button:hover {
     padding: 1em 3em;
     background-color: rgb(182, 212, 63);
 }
@@ -350,7 +443,6 @@ section:nth-of-type(3) div button {
     transition: 0.2s;
     box-shadow: none;
 }
-
 
 section:nth-of-type(3) div button:hover {
     background-color: rgb(219, 7, 7);
