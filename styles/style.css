@@ -248,6 +248,10 @@ section:nth-child(2) > button:after {
     transform: skewY(9.3deg) scaleY(0);
 }
 
+section:nth-child(2) > button:active:after {
+    background-color: var(--blue);
+}
+
 section:nth-child(2) > button:hover:after {
     /* animation */
     transform-origin: bottom;
