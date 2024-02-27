@@ -1,18 +1,21 @@
 # CSS to the Rescue
+
 Hello there!
 This repo was created for a one-day project. We did this short project together with 3 people. We worked on the popover feature, which was new for all of us, and we tried new experiments to make it challenging. 
 
 ## Build with
+
 - Git
 - Semantically correct HTML
 - Clear CSS
 
 ## Cloning
+
   You can follow the steps below to use the project. Use the following command in your terminal:
 
 <pre><code>git clone https://github.com/lainecedes/cssToTheRescue.git</code></pre>
 
-## :black_nib: AUTHOR
+## :black_nib: Authors
 
 This project is made by 
 
@@ -22,8 +25,8 @@ This project is made by
 
 [Justin Prins](https://github.com/JustinPrins98)
 
-## :copyright: LICENCE
+## :copyright: Licence
 
-This project uses the [MIT License]().
+This project uses the [MIT License](https://github.com/lainecedes/cssToTheRescue/blob/main/LICENCE).
 
 
